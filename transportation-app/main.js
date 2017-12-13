@@ -1,12 +1,46 @@
 (function() {
+    generateMainScreen();
+    
+    getDrivers()
+    .then(function (response) 
+    {
+       createDriverView(response);
+   
+   
+        
 
-    // -------------------- show exist data ------------ //
-    const driversContainer = document.getElementById('drivers');
-
-    getDrivers().then(function(response) {
-        // Code
-        // Take driver template and attach drivers data, append all to driversContainer
+    })
+    .catch(function (err) 
+    {
+        console.error('Augh, there was an error!', err.statusText);
     });
+
+
+    
+    
+    
+        
+     //   createIndexFile();
+    
+
+
+
+        
+    
+
+    // createIndexFile()
+    // {
+    //     const mainContainer = document.createElement('div'); 
+    //     mainContainer.className += "container-fluid";
+    //     bodyElement.appendChild(mainContainer);
+    // }
+    // -------------------- show exist data ------------ //
+    
+
+    // getDrivers().then(function(response) {
+    //     // Code
+    //     // Take driver template and attach drivers data, append all to driversContainer
+    // });
 
 
 
